@@ -1,0 +1,118 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Symbols",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "vim_mode": false,
+  "ui_font_size": 15,
+  "buffer_font_family": "Monaspace Neon",
+  "buffer_font_weight": 400,
+  "buffer_font_size": 14,
+  "agent_font_size": 15,
+  "theme": "Github Dark Dimmed",
+  "journal": {
+    "path": "~",
+    "hour_format": "hour24"
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "function": {
+        "font_style": "italic",
+        "font_weight": 600
+      },
+      "comment": {
+        "color": "#07a102",
+        "font_style": "italic"
+        // "font_weight": 300
+        // "background_color": "#9bab9b"
+      },
+      "keyword": {
+        "font_weight": 600
+      },
+      "attribute": {
+        "color": "#ffa657"
+      },
+      "comment.doc": {
+        "font_style": "italic"
+      }
+    }
+  },
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+    "background_coloring": "indent_aware"
+  },
+  "autosave": "on_focus_change",
+  "confirm_quit": true,
+  "languages": {
+    "Go": {
+      "format_on_save": "language_server"
+      // "inlay_hints": {
+      //   "show_type_hints": true,
+      //   "enabled": true,
+      //   // "show_other_hints": true,
+      //   // "show_background": true,
+      //   "show_parameter_hints": true
+      // }
+    },
+    "Python": {
+      "format_on_save": {
+        "external": {
+          "command": "/opt/homebrew/bin/black",
+          "arguments": ["-", "--line-length", "80"]
+        }
+      }
+    },
+    "YAML": {
+      "format_on_save": "off"
+    }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "wrap_guides": [100],
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash-preview-05-20"
+    },
+    "default_profile": "write",
+    "enabled": true,
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": ["-tags=wifiitest,wifiicheck,integration,remote"]
+      }
+    }
+    // "yaml-language-server": {
+    //   "settings": {
+    //     "yaml": {
+    //       // "keyOrdering": true,
+    //       "format": {
+    //         "singleQuote": true
+    //       },
+    //       "schemas": {
+    //         "../topology.schema.json": ["*/topology.yaml"]
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
