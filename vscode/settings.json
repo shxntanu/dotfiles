@@ -1,0 +1,118 @@
+{
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.fontFamily": "'Monaspace Neon', SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.fontSize": 14,
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "terminal.integrated.fontSize": 14,
+  "files.autoSave": "afterDelay",
+  "window.confirmBeforeClose": "keyboardOnly",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "editor.minimap.renderCharacters": false,
+  "chat.commandCenter.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "makefile.configureOnOpen": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.autofetch": true,
+  "go.testTimeout": "2m",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Highlights go tags
+  "todohighlight.keywords": [
+    {
+      "text": "//go:",
+      "color": "#FFA500", // orange
+      "backgroundColor": "#222222"
+    }
+  ],
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "remote.SSH.localServerDownload": "off",
+  "remote.SSH.remoteServerListenOnSocket": true,
+  "remote.SSH.remotePlatform": {
+    "bus-home": "linux",
+    "shantanu-wable-wifiappsautotest-0": "linux"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.minimap.enabled": false,
+
+  "editor.tokenColorCustomizations": {
+    "[GitHub Dark]": {
+      "comments": "#339966" // Comment colour appears here
+    },
+    "textMateRules": [
+      {
+        "scope": "string",
+        "settings": {
+          // "foreground": "#ff00b0"
+          // "fontStyle":
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          // "fontStyle": "italic bold"
+        }
+      }
+    ]
+  },
+
+  "editor.semanticTokenColorCustomizations": {
+    "[*]": {
+      "rules": {
+        "function": {
+          "fontStyle": "italic"
+        },
+        "type": {
+          "fontStyle": "bold"
+        }
+      }
+    }
+  },
+
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "redhat.telemetry.enabled": false,
+  "editor.rulers": [
+    {
+      "column": 100
+    }
+  ],
+  "window.zoomPerWindow": true,
+  "window.commandCenter": false,
+  "terminal.integrated.suggest.enabled": false,
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "python.analysis.typeCheckingMode": "standard",
+
+  "yaml.schemas": {
+    "/Users/shantanu.wable/.vscode/extensions/continue.continue-1.0.11-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  }
+}
