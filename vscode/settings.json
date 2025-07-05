@@ -1,84 +1,48 @@
 {
-  "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "GitHub Dark",
-  "editor.fontFamily": "'Monaspace Neon', SF Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton', monospace",
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
-  "editor.fontSize": 14,
-  "C_Cpp.default.compilerPath": "/usr/bin/clang",
-  "terminal.integrated.fontSize": 14,
-  "files.autoSave": "afterDelay",
-  "window.confirmBeforeClose": "keyboardOnly",
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "editor.minimap.renderCharacters": false,
-  "chat.commandCenter.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "makefile.configureOnOpen": true,
-  "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "git.autofetch": true,
-  "go.testTimeout": "2m",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-
-  // Highlights go tags
-  "todohighlight.keywords": [
-    {
-      "text": "//go:",
-      "color": "#FFA500", // orange
-      "backgroundColor": "#222222"
-    }
-  ],
-
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  "remote.SSH.localServerDownload": "off",
-  "remote.SSH.remoteServerListenOnSocket": true,
-  "remote.SSH.remotePlatform": {
-    "bus-home": "linux",
-    "shantanu-wable-wifiappsautotest-0": "linux"
-  },
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "chat.commandCenter.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.cursorSurroundingLines": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Monaspace Neon', SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton', monospace",
   "editor.minimap.enabled": false,
-
-  "editor.tokenColorCustomizations": {
-    "[GitHub Dark]": {
-      "comments": "#339966" // Comment colour appears here
-    },
-    "textMateRules": [
-      {
-        "scope": "string",
-        "settings": {
-          // "foreground": "#ff00b0"
-          // "fontStyle":
-        }
-      },
-      {
-        "scope": "comment",
-        "settings": {
-          // "fontStyle": "italic bold"
-        }
-      }
-    ]
-  },
-
+  "editor.minimap.renderCharacters": false,
+  "editor.rulers": [
+    {
+      "column": 100
+    }
+  ],
+  "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
     "[*]": {
       "rules": {
@@ -91,25 +55,90 @@
       }
     }
   },
-
-  "[c]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "editor.tokenColorCustomizations": {
+    "[GitHub Dark]": {
+      "comments": "#339966" // Comment colour appears here
+    }
+    // "textMateRules": [
+    //   {
+    //     "scope": "string",
+    //     "settings": {
+    //       // "foreground": "#ff00b0"
+    //       // "fontStyle":
+    //     }
+    //   },
+    //   {
+    //     "scope": "comment",
+    //     "settings": {
+    //       "fontStyle": "italic bold"
+    //     }
+    //   }
+    // ]
   },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env.*",
+    ".env.*": ".env.${capture}.local",
+    "*.ex": "${capture}.eex, ${capture}.html.heex",
+    "*.go": "${capture}_test.go",
+    "*.js": "${capture}.d.ts, ${capture}.d.ts.map, ${capture}.js.map, ${capture}.min.js, ${capture}.test.d.ts.map, ${capture}.test.js",
+    "*.mjs": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs.map",
+    "*.mts": "${capture}.d.mts, ${capture}.d.mts.map, ${capture}.mjs, ${capture}.mjs.map",
+    "*.svelte": "${capture}.css, ${capture}.stories.js, ${capture}.stories.ts, ${capture}.svelte.d.ts, ${capture}.svelte.d.ts.map, ${capture}.test.ts",
+    "*.ts": "${capture}.test.ts, ${capture}.test-d.ts, ${capture}.test.ts.map, ${capture}.js",
+    "compose.yaml": "compose.override.yaml, *.compose.yaml, *.compose.override.yaml",
+    "minepkg.toml": ".minepkg-lock.toml",
+    "mix.exs": "mix.lock",
+    "package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
+    "tailwind.config.cjs": "tailwind.*.cjs, tailwind.*.json",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+    "tsconfig.tsbuildinfo": "tsconfig.*.tsbuildinfo"
+  },
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "find-it-faster.general.openFileInPreviewEditor": true,
+  "find-it-faster.general.useTerminalInEditor": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "go.testTimeout": "2m",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "makefile.configureOnOpen": true,
+  "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": false,
-  "editor.rulers": [
+  "remote.autoForwardPortsSource": "hybrid",
+  "remote.SSH.localServerDownload": "off",
+  "remote.SSH.remotePlatform": {
+    "bus-home": "linux",
+    "shantanu-wable-wifiappsautotest-0": "linux"
+  },
+  "remote.SSH.remoteServerListenOnSocket": true,
+  "search.defaultViewMode": "tree",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.suggest.enabled": false,
+  // Highlights go tags
+  "todohighlight.keywords": [
     {
-      "column": 100
+      "backgroundColor": "#222222",
+      "color": "#FFA500", // orange
+      "text": "//go:"
     }
   ],
-  "window.zoomPerWindow": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": false,
-  "terminal.integrated.suggest.enabled": false,
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "remote.autoForwardPortsSource": "hybrid",
-  "python.analysis.typeCheckingMode": "standard",
-
+  "window.confirmBeforeClose": "keyboardOnly",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "window.zoomPerWindow": true,
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.iconTheme": "symbols",
   "yaml.schemas": {
     "/Users/shantanu.wable/.vscode/extensions/continue.continue-1.0.11-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
